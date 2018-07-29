@@ -1,0 +1,58 @@
+{% extends 'blog/posts/base.html' %}
+
+		{% block title %}
+            <title>{{ singlepost.title }}</title>
+        {% endblock %}
+                {% block content %}
+                              	<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">{{ singlepost.title }}</a></h2>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2015-11-01">{{ singlepost.publish_date }}</time>
+										<!--<a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>-->
+									</div>
+								</header>
+								<!--<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>-->
+
+                                 {{ singlepost.content|safe }}
+
+                                 <a href="http://localhost:8000/posts/second-post#disqus_thread"></a>
+
+                                <footer>
+									<ul class="stats">
+										<li><a href="#">{{ singlepost.category }}</a></li>
+										<li><a href="#" class="icon fa-heart">1</a></li>
+									</ul>
+								</footer>
+                                    <ul class="icons">
+                                        <li>Share</li>
+                                        <li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
+                                        <li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
+                                        <li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
+                                        <li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
+                                        <li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
+                                    </ul>
+
+                            <div id="disqus_thread"></div>
+                                <script>
+                                (function() { // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+                                s.src = 'https://planshareblog.disqus.com/embed.js';
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                                })();
+                                </script>
+                                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>	</article>
+					</div>
+
+                {% endblock %}
+
+
+
+

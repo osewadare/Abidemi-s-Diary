@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Thank You</title>
+	<link href='https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/static/posts2/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/posts2/emailsubscriptionsuccess/normalize.css">
+    <link rel="stylesheet" href="/static/posts2/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/static/posts2/emailsubscriptionsuccess/default_thank_you.css">
+	<script src="/static/posts2/js/jquery.min.js"></script>
+	<script src="/static/posts2/emailsubscriptionsuccess/html5shiv.js"></script>
+</head>
+<body>
+	<header class="site-header" id="header">
+		<h1 class="site-header__title" data-lead-id="site-header-title">THANK YOU!</h1>
+	</header>
+
+	<div class="main-content">
+		<i class="fa fa-check main-content__checkmark" id="checkmark"></i>
+		<p class="main-content__body" data-lead-id="main-content-body">We are glad with your contribution </p>
+        <p class="main-content__body" data-lead-id="main-content-body">Your contribution will go along in empowering and transforming teens and children </p>
+        <p class="main-content__body" data-lead-id="main-content-body">You can remit your contribution to the account below: </p>
+	    <p class="main-content__body" data-lead-id="main-content-body">Account Name: MGBG Foundation</p>
+		<p class="main-content__body" data-lead-id="main-content-body">Account Number: 0123456789</p>
+        <p class="main-content__body" data-lead-id="main-content-body">The transfer will be acknowledged once received. Thanks once again</p>
+        <a href="{% url 'blog:index' %}" class="btn btn-primary">Back to Homepage</a>
+	</div>
+
+	<footer class="site-footer" id="footer">
+		<p class="site-footer__fineprint" id="fineprint">Copyright ©2016-2017 | All Rights Reserved</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+{% extends 'blog/posts/base.html' %}
+
+		{% block title %}
+            <title>{{ blog_settings.0.title }} : {{ publisher }}</title>
+        {% endblock %}
+                {% block content %}
+                            <!-- Main -->
+					<div id="main">
+
+                        {%  for post in user_posts %}
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="{% url 'blog:singlepostview' post.slug %}">{{ post.title }}</a></h2>
+                                    </div>
+									<div class="meta">
+										<time class="published" datetime="2015-11-01">{{ post.publish_date }}</time>
+										<a href="#" class="author"><span class="name">{{ post.publisher }}</span><img src="/media/{{ post.publisher.profilepicture }}" alt="" /></a>
+									</div>
+								</header>
+								<a href="#" class="image featured"><img src="/static/images/pic01.jpg" alt="" /></a>
+								<p>{{ post.content|slice:"100" }}</p>
+                                <p> Share  <a type="button" href="https://facebook.com/share=www.abidemi.com/{{ post.slug }}"> <span class="fa fa-facebook"></span></a></p>
+
+
+
+								<footer>
+									<ul class="actions">
+										<li><a href="{% url 'blog:singlepostview' post.slug %}" class="button big">Continue Reading</a></li>
+									</ul>
+
+									<ul class="stats">
+										<li><a href="#">{{ post.category }}</a></li>
+										<li><a href="#" class="icon fa-heart">{{ post }}</a></li>
+
+										<li><a class="icon fa-comment">{{ post.comments }}</a></li>
+									</ul>
+
+								</footer>
+							</article>
+
+						{% endfor %}
+
+
+						<!-- Pagination -->
+							<ul class="actions pagination">
+								<li><a href="" class="disabled button big previous">Previous Page</a></li>
+								<li><a href="#" class="button big next">Next Page</a></li>
+							</ul>
+
+					</div>
+
+                {% endblock %}
+
+
+
+
